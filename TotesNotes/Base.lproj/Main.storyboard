@@ -24,6 +24,9 @@
                                     <constraint firstAttribute="width" constant="148" id="Q4y-j3-hZ6"/>
                                 </constraints>
                                 <state key="normal" title="Remind me to do that"/>
+                                <connections>
+                                    <action selector="alertButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qxQ-O8-35b"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -32,9 +35,6 @@
                             <constraint firstItem="KYs-oY-frF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ulV-Xf-dHn"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="reminderButton" destination="KYs-oY-frF" id="dUl-a9-SON"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

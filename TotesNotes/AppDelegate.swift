@@ -40,6 +40,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification){
+        print(notification.alertTitle! + " " + notification.alertBody!)
+        
+        let someAlert = UIAlertController(title: notification.alertTitle, message: notification.alertBody, preferredStyle: .Alert)
+        
+        UIApplication.sharedApplication().windows[0].rootViewController?.presentViewController(someAlert, animated: true, completion: nil)
+    }
 
 
 }
