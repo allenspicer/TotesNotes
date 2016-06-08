@@ -12,14 +12,21 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.reminderButton.addTarget(self, action: Selector(createInstantNotification()), forControlEvents: .TouchUpInside)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBOutlet weak var reminderButton: UIButton!
+    
+    
+    func createInstantNotification(){
+        let someNote = UILocalNotification()
+        
+        someNote.fireDate = NSDate().dateByAddingTimeInterval(3.0)
+        someNote.alertBody = "This is the 3 second delayed notification"
+        
     }
-
+    
+    
 
 }
 
